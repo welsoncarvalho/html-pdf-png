@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Test Export PDF</title>
+
+        <style>
+            .table {
+                background: #fff;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h4>Simple Table</h4>
+        <div id="divExport">
+            <table id="tableUsers" border="1" class="table">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Peter</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jeremy</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br />
+        <button type="button" onclick="javascript:exportPdf('divExport', 'test-html-pdf');">
+            Export PDF
+        </button>
+        <button type="button" onclick="javascript:exportPng('divExport', 'test-html-pdf');">
+            Export PNG
+        </button>
+
+        <!-- Scripts -->
+        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/jspdf.min.js"></script>
+        <!--<script type="text/javascript" src="js/canvas2image.js"></script>-->
+
+        <script type="text/javascript" src="js/export.js"></script>
+    </body>
+</html>
